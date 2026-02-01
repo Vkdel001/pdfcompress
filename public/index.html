@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Compressor - Reduce PDF File Size</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📄 PDF Compressor</h1>
+            <p class="subtitle">Compress your PDF files quickly and easily</p>
+        </header>
+
+        <main id="app">
+            <!-- Upload Section -->
+            <section id="uploadSection" class="section active">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📁</div>
+                    <h2>Drop your PDF here</h2>
+                    <p>or click to browse</p>
+                    <p class="file-limit">Maximum file size: 1GB</p>
+                    <input type="file" id="fileInput" accept=".pdf" hidden>
+                </div>
+
+                <div id="fileInfo" class="file-info hidden">
+                    <div class="file-details">
+                        <span class="file-icon">📄</span>
+                        <div class="file-text">
+                            <p class="file-name" id="fileName"></p>
+                            <p class="file-size" id="fileSize"></p>
+                        </div>
+                        <button class="btn-remove" id="removeFile" aria-label="Remove file">✕</button>
+                    </div>
+                </div>
+
+                <div class="compression-options">
+                    <h3>Compression Level</h3>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="compression" value="low">
+                            <span class="radio-label">
+                                <strong>Low</strong>
+                                <small>Light compression, best quality</small>
+                            </span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="compression" value="recommended" checked>
+                            <span class="radio-label">
+                                <strong>Recommended</strong>
+                                <small>Balanced compression</small>
+                            </span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="compression" value="extreme">
+                            <span class="radio-label">
+                                <strong>Extreme</strong>
+                                <small>Maximum compression, smaller size</small>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <button id="compressBtn" class="btn-primary" disabled>
+                    Compress PDF
+                </button>
+            </section>
+
+            <!-- Processing Section -->
+            <section id="processingSection" class="section hidden">
+                <div class="processing-container">
+                    <div class="spinner"></div>
+                    <h2 id="statusMessage">Uploading file...</h2>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p class="progress-text" id="progressText">0%</p>
+                    <button id="cancelBtn" class="btn-secondary">Cancel</button>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section id="resultsSection" class="section hidden">
+                <div class="results-container">
+                    <div class="success-icon">✅</div>
+                    <h2>Compression Complete!</h2>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <p class="stat-label">Original Size</p>
+                            <p class="stat-value" id="originalSize">-</p>
+                        </div>
+                        <div class="stat-card">
+                            <p class="stat-label">Compressed Size</p>
+                            <p class="stat-value" id="compressedSize">-</p>
+                        </div>
+                        <div class="stat-card highlight">
+                            <p class="stat-label">Space Saved</p>
+                            <p class="stat-value" id="spaceSaved">-</p>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button id="downloadBtn" class="btn-primary">
+                            Download Compressed PDF
+                        </button>
+                        <button id="compressAnotherBtn" class="btn-secondary">
+                            Compress Another File
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Error Section -->
+            <section id="errorSection" class="section hidden">
+                <div class="error-container">
+                    <div class="error-icon">❌</div>
+                    <h2>Oops! Something went wrong</h2>
+                    <p id="errorMessage" class="error-message"></p>
+                    <button id="tryAgainBtn" class="btn-primary">Try Again</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Powered by iLovePDF API | Maximum file size: 1GB</p>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

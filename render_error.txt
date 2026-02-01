@@ -1,0 +1,53 @@
+2026-02-01T15:59:13.663544837Z ==> It looks like we don't have access to your repo, but we'll try to clone it anyway.
+2026-02-01T15:59:13.663562339Z ==> Cloning from https://github.com/Vkdel001/pdfcompress
+2026-02-01T15:59:14.417559073Z ==> Checking out commit 9251b77213272eaa86583192f70c1e73f4b91d5e in branch main
+2026-02-01T15:59:15.68875354Z ==> Using Node.js version 22.22.0 (default)
+2026-02-01T15:59:15.712777403Z ==> Docs on specifying a Node.js version: https://render.com/docs/node-version
+2026-02-01T15:59:18.370634586Z ==> Running build command 'npm install'...
+2026-02-01T15:59:19.52321348Z 
+2026-02-01T15:59:19.523234191Z added 40 packages, and audited 41 packages in 1s
+2026-02-01T15:59:19.523244752Z 
+2026-02-01T15:59:19.523259073Z 8 packages are looking for funding
+2026-02-01T15:59:19.523265613Z   run `npm fund` for details
+2026-02-01T15:59:19.527235478Z 
+2026-02-01T15:59:19.527244519Z 4 high severity vulnerabilities
+2026-02-01T15:59:19.527248129Z 
+2026-02-01T15:59:19.527251839Z To address all issues (including breaking changes), run:
+2026-02-01T15:59:19.52725574Z   npm audit fix --force
+2026-02-01T15:59:19.52725903Z 
+2026-02-01T15:59:19.52726242Z Run `npm audit` for details.
+2026-02-01T15:59:25.652588064Z ==> Uploading build...
+2026-02-01T15:59:29.858785394Z ==> Uploaded in 3.4s. Compression took 0.8s
+2026-02-01T15:59:29.871824129Z ==> Build successful 🎉
+2026-02-01T15:59:32.869383309Z ==> Deploying...
+2026-02-01T15:59:32.95772437Z ==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+2026-02-01T15:59:49.896857209Z ==> Running 'node index.js'
+2026-02-01T15:59:50.898697709Z ❌ Error compressing PDF: Input file not found: ./input.pdf
+2026-02-01T15:59:50.899264292Z file:///opt/render/project/src/index.js:16
+2026-02-01T15:59:50.899275302Z       throw new Error(`Input file not found: ${inputFilePath}`);
+2026-02-01T15:59:50.899278563Z             ^
+2026-02-01T15:59:50.899281103Z 
+2026-02-01T15:59:50.899283903Z Error: Input file not found: ./input.pdf
+2026-02-01T15:59:50.899286853Z     at compressPDF (file:///opt/render/project/src/index.js:16:13)
+2026-02-01T15:59:50.899289183Z     at file:///opt/render/project/src/index.js:79:1
+2026-02-01T15:59:50.899291874Z     at ModuleJob.run (node:internal/modules/esm/module_job:343:25)
+2026-02-01T15:59:50.899295474Z     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:665:26)
+2026-02-01T15:59:50.899298054Z     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+2026-02-01T15:59:50.899300434Z 
+2026-02-01T15:59:50.899303024Z Node.js v22.22.0
+2026-02-01T15:59:54.13039231Z ==> Exited with status 1
+2026-02-01T15:59:54.133467796Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
+2026-02-01T15:59:57.499783185Z ==> Running 'node index.js'
+2026-02-01T15:59:58.496741371Z ❌ Error compressing PDF: Input file not found: ./input.pdf
+2026-02-01T15:59:58.497395509Z file:///opt/render/project/src/index.js:16
+2026-02-01T15:59:58.497408741Z       throw new Error(`Input file not found: ${inputFilePath}`);
+2026-02-01T15:59:58.497412151Z             ^
+2026-02-01T15:59:58.497414581Z 
+2026-02-01T15:59:58.497417591Z Error: Input file not found: ./input.pdf
+2026-02-01T15:59:58.497420791Z     at compressPDF (file:///opt/render/project/src/index.js:16:13)
+2026-02-01T15:59:58.497423502Z     at file:///opt/render/project/src/index.js:79:1
+2026-02-01T15:59:58.497426162Z     at ModuleJob.run (node:internal/modules/esm/module_job:343:25)
+2026-02-01T15:59:58.497429072Z     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:665:26)
+2026-02-01T15:59:58.497431982Z     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+2026-02-01T15:59:58.497434163Z 
+2026-02-01T15:59:58.497436543Z Node.js v22.22.0
